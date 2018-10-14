@@ -27,6 +27,8 @@ public class gameSys {
             gameMenu();
 
         } else if (convInput == 'q') {
+            System.out.println();
+            System.out.println("Bedankt voor het spelen van Blackjack");
             System.exit(0);
         } else {
             System.out.println("Het is mij onduidelijk wat u wilt");
@@ -69,7 +71,7 @@ public class gameSys {
         Dealer.spelerBlackjack = false;
         Dealer.dealerBlackjack = false;
         System.out.println();
-        System.out.println("Bedankt voor het spelen van Blackjack");
+        System.out.println("Wilt u een nieuwe ronde Blackjack starten?");
         startMenu();
     }
 }

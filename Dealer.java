@@ -112,10 +112,14 @@ public class Dealer extends Speler {
         int dealerValue = 0;
         System.out.print("De dealer had de " + gameSys.dealer.hand.get(0).name + " reeds open en draait nu de gesloten kaart om en toont de " + gameSys.dealer.hand.get(1).name +" - ");
         for (Card c : dealerHand) {
-            dealerValue += c.value;}
+            dealerValue += c.value;
+        }
             if (spelerBlackjack && dealerValue != 21){
                 System.out.println("De dealer heeft " + dealerValue + " punten");
                 compareScores();
+            } else if (dealerValue==22) {
+                dealerScore = 12;
+                dealerPlaysOn();
             }
             else if (dealerValue == 21) {
                 dealerBlackjack = true;
